@@ -328,6 +328,7 @@ jobs:
           mv Floating-RF-V8/* .
           rmdir Floating-RF-V8
       - name: Build debug APK
+        working-directory: proj
         run: gradle --no-daemon assembleDebug
       - uses: actions/upload-artifact@v4
         with:
